@@ -10,8 +10,8 @@ router.post('/signup', async(req, res) => {
     const password = req.body.password;
     // check if user exists
     await User.create({
-        username,
-        password
+        username: username,
+        password: password
     })
     res.json({
         message: 'User created successfully'
